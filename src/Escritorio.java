@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -169,9 +172,24 @@ public class Escritorio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private void verificarCredencial(){
+        String email = jtxtEmail.getText();
+        String contraseña = new String(jtxtContraseña.getPassword());
+        if (email.equals("alumno@ulp.edu.ar") && contraseña.equals("12345678")){
+            JOptionPane.showMessageDialog(this,"¡Bienvenido/a " + email + "!",
+                    "acceso consedido",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }else {
+            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos",
+                    "Error de acceso",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     private void JbtnVerificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnVerificacionActionPerformed
         // TODO add your handling code here:
+        verificarCredencial();
     }//GEN-LAST:event_JbtnVerificacionActionPerformed
 
     private void JbtnOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnOcultarActionPerformed
