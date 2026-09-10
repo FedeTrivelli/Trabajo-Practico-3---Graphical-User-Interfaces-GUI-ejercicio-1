@@ -201,7 +201,15 @@ public class Escritorio extends javax.swing.JFrame {
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+        
+        private void jbtnOcultarActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        jtxtContraseña.setEchoChar('*');
+
+        private void jbtnVerActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        jtxtContraseña.setEchoChar((char)0);
+    }
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Escritorio().setVisible(true));
