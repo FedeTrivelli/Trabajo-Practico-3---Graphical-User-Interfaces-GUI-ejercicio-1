@@ -51,7 +51,7 @@ public class Escritorio extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(640, 480));
         jPanel1.setPreferredSize(new java.awt.Dimension(640, 480));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingrese las Credenciales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Ingrese las Credenciales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
         jPanel2.setMaximumSize(new java.awt.Dimension(640, 480));
 
         JlblUsuario.setText("Usuario");
@@ -176,10 +176,12 @@ public class Escritorio extends javax.swing.JFrame {
 
     private void JbtnOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnOcultarActionPerformed
         // TODO add your handling code here:
+        jtxtContraseña.setEchoChar('*');
     }//GEN-LAST:event_JbtnOcultarActionPerformed
 
     private void JbtnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnVerActionPerformed
         // TODO add your handling code here:
+         jtxtContraseña.setEchoChar((char)0);
     }//GEN-LAST:event_JbtnVerActionPerformed
 
     /**
@@ -201,18 +203,11 @@ public class Escritorio extends javax.swing.JFrame {
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
-        private void jbtnOcultarActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        jtxtContraseña.setEchoChar('*');
-
-        private void jbtnVerActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        jtxtContraseña.setEchoChar((char)0);
-    }
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Escritorio().setVisible(true));
+        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
